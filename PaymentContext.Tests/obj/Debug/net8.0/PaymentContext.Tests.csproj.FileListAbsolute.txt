@@ -109,3 +109,9 @@ C:\repos\PaymentContext\PaymentContext.Tests\obj\Debug\net8.0\refint\PaymentCont
 C:\repos\PaymentContext\PaymentContext.Tests\obj\Debug\net8.0\PaymentContext.Tests.pdb
 C:\repos\PaymentContext\PaymentContext.Tests\obj\Debug\net8.0\PaymentContext.Tests.genruntimeconfig.cache
 C:\repos\PaymentContext\PaymentContext.Tests\obj\Debug\net8.0\ref\PaymentContext.Tests.dll
+C:\repos\PaymentContext\PaymentContext.Tests\bin\Debug\net8.0\CoverletSourceRootsMapping_PaymentContext.Tests
+C:\repos\PaymentContext\PaymentContext.Tests\bin\Debug\net8.0\PaymentContext.Domain.dll
+C:\repos\PaymentContext\PaymentContext.Tests\bin\Debug\net8.0\PaymentContext.Shared.dll
+C:\repos\PaymentContext\PaymentContext.Tests\bin\Debug\net8.0\PaymentContext.Shared.pdb
+C:\repos\PaymentContext\PaymentContext.Tests\bin\Debug\net8.0\PaymentContext.Domain.pdb
+C:\repos\PaymentContext\PaymentContext.Tests\obj\Debug\net8.0\PaymentContext.Tests.sourcelink.json
