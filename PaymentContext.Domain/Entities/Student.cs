@@ -36,7 +36,7 @@ public class Student : Entity
         
         AddNotifications(new Contract<Student>()
             .Requires()
-            .IsFalse(hasSubscriptionActive, "Student.Subscriptions", "You already have a active subscription"));
-        
+            .IsFalse(hasSubscriptionActive, "Student.Subscriptions", "You already have a active subscription")
+            .AreEquals(0, subscription.Payments.Count, "Student.Subscriptions", "This subscription don't has payment"));
     }
 }
