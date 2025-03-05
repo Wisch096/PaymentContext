@@ -25,7 +25,7 @@ public class Document : ValueObject
         switch (Type)
         {
             case EDocumentType.CNPJ when Number.Length == 14:
-            case EDocumentType.CNPJ when Number.Length == 11:
+            case EDocumentType.CPF when Number.Length == 11:
                 return true;
             default:
                 return false;
