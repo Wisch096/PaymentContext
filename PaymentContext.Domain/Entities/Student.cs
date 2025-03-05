@@ -12,6 +12,7 @@ public class Student : Entity
         Document = document;
         Email = email;
         _subscriptions = new List<Subscription>();
+        
     }
 
     public Name Name { get; private set; }
