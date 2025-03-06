@@ -12,7 +12,6 @@ public class StudentTests
     private readonly Document _document;
     private readonly Addres _address; 
     private readonly Student _student;
-    private readonly Subscription _subscription;
 
     public StudentTests()
     {
@@ -20,22 +19,20 @@ public class StudentTests
         _document = new Document("02031835505", EDocumentType.CPF);
         _email = new Email("bruce@wayne.com");
         _student = new Student(_name, _document, _email);
-        _address = 
-            new Addres("Rua afonso soares", "106", "Vila Rica", "Barreiras", "BA", "BR", "47813122");
-        _subscription = new Subscription(null);
-        
+        _address = new Addres("Rua afonso soares", "106", "Vila Rica", "Barreiras", "BA", "BR", "47813122");
     }
     
     [TestMethod]
     public void ShouldReturnErrorWhenHadActiveSubscription()
     {
+        var subscription = new Subscription(null);
         var payment = 
             new PayPalPayment
                 (DateTime.Now, DateTime.Now.AddDays(1), 100, 100, _student.Name.FirstName, _document, _address, _email,"45545445");
         
-        _subscription.AddPayment(payment);
-        _student.AddSubscription(_subscription);
-        _student.AddSubscription(_subscription);
+        subscription.AddPayment(payment);
+        _student.AddSubscription(subscription);
+        _student.AddSubscription(subscription);
         
         Assert.IsTrue(!_student.IsValid);
     }
@@ -43,7 +40,8 @@ public class StudentTests
     [TestMethod]
     public void ShouldReturnErrorWhenSubscriptionHasNoPayment()
     {
-        _student.AddSubscription(_subscription);
+        var subscription = new Subscription(null);
+        _student.AddSubscription(subscription);
         
         Assert.IsTrue(!_student.IsValid);
     }
@@ -51,11 +49,12 @@ public class StudentTests
     [TestMethod]
     public void ShouldReturnErrorWhenAddSubscription()
     {
+        var subscription = new Subscription(null);
         var payment = 
             new PayPalPayment
                 (DateTime.Now, DateTime.Now.AddDays(1), 100, 100, _student.Name.FirstName, _document, _address, _email,"45545445");
-        _subscription.AddPayment(payment);
-        _student.AddSubscription(_subscription);
+        subscription.AddPayment(payment);
+        _student.AddSubscription(subscription);
         Assert.IsTrue(_student.IsValid);
     }
     
