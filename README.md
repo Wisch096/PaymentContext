@@ -1,3 +1,5 @@
+Modelagem de Domínios Ricos
+
 📌 Sobre este repositório
 
 Este repositório foi criado para armazenar meus estudos sobre modelagem de domínios ricos. A ideia é explorar boas práticas e padrões de design que ajudam a tornar o domínio mais expressivo, encapsulando regras de negócio dentro das entidades e agregados.
